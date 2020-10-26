@@ -1,12 +1,12 @@
 // Создание объекта
 
-let user1 = new Object(); // синтаксис онструктор объекта 
+let user1 = new Object(); // синтаксис конструктор объекта 
 let user2 = {}; // синтаксис литерал объекта - более предпочтительный
 
 // Литералы и свойства
 
 let user3 = {
-    name: "John", // ключ "name" свойство "John"
+    name: "John", // ключ - свойство "name" значение "John"
     age: 30
 };
 
@@ -26,6 +26,9 @@ let user4 = {
 // Доступ к именам свойств из нескольких слов
 
 user4["likes birds"] = true; // user4.propertyName - такой способ не сработает
+
+let propertyName = "likes birds";
+user4.propertyName = true; // НЕ СРАБОТАЕТ !!!
 
 // Вычисляемые свойства
 
@@ -54,5 +57,7 @@ function makeUser(name, age) {
       // ...
     };
   }
+
+  
 
   
