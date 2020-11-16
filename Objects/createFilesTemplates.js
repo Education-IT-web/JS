@@ -1,6 +1,8 @@
-let fs;
+let fs, folderName;
+folderName = process.argv[2];
+fs = require('fs');
 let tempInfo = {
-    projectPath: __dirname + '\\',
+    projectPath: __dirname + '\\' + folderName + '\\',
     templatesList: [
         'index.html',
         'script.js',
@@ -14,7 +16,7 @@ let tempInfo = {
         'README.md': '#   JS\n#### В этом проекте описаны [...] \n\n<hr>\n\n\n<br>\n'
     }
 }
-fs = require('fs');
+
 function createFilesTemplates() {
     for (let fileName of tempInfo.templatesList) {
         fs.open(tempInfo.projectPath + fileName, 'w', (err) => {
@@ -23,24 +25,43 @@ function createFilesTemplates() {
         });
     }
 }
-
 function addBodysTemplates() {
     for (let fileName of tempInfo.templatesList) {
         fs.appendFile(tempInfo.projectPath + fileName, tempInfo.templatesDesc[fileName], (err) => {
             if (err) throw err;
-            console.log('Data has been added!');
+            console.log('Data has been added! in ' + fileName);
         });
     }
 }
-
 function clearBodysTemplates() {
     for (let fileName of tempInfo.templatesList) {
         fs.writeFile(tempInfo.projectPath + fileName, "", (err) => {
             if (err) throw err;
-            console.log('Data has been added!');
+            console.log('Data has been refreshed');
         });
     }
 }
-//createFilesTemplates();
-//clearBodysTemplates();
-//addBodysTemplates();
+function checkFolder() {
+    try {
+        fs.accessSync(folderName, fs.constants.R_OK | fs.constants.W_OK);cd ..
+        return true;
+    } catch (err) {
+        console.error("Folder cannot be find!");
+        return false;
+    }
+}
+function createFolder() {
+    try {
+        fs.mkdirSync(folderName, fs.constants.R_OK | fs.constants.W_OK);
+        console.log("Folder " + folderName + " created.");
+    } catch (err) {
+        console.error("Folder cannot be created!")
+    }
+}
+
+if (!checkFolder()){
+    createFolder();
+}
+createFilesTemplates();
+clearBodysTemplates();
+addBodysTemplates();
