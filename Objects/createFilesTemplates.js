@@ -11,8 +11,8 @@ let tempInfo = {
     ],
     templatesDesc: {
         'index.html': '<!DOCTYPE html> \n<html lang="en">\n<head>\n    <meta charset="UTF-8">\n    <meta name="viewport" content="width=device-width, initial-scale=1.0">\n    <title>\n        Document\n    </title>\n</head>\n<body>\n\n\n</body>\n</html>',
-        'script.js': 'hello js',
-        'style.css': 'hello css',
+        'script.js': '',
+        'style.css': '',
         'README.md': '#   JS\n#### В этом проекте описаны [...] \n\n<hr>\n\n\n<br>\n'
     }
 }
