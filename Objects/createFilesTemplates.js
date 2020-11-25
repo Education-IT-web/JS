@@ -7,13 +7,17 @@ let tempInfo = {
         'index.html',
         'script.js',
         'style.css',
-        'README.md'
+        'README.md',
+        'sitemap.xml',
+        'Robots.txt'
     ],
     templatesDesc: {
         'index.html': '<!DOCTYPE html> \n<html lang="en">\n<head>\n    <meta charset="UTF-8">\n    <meta name="viewport" content="width=device-width, initial-scale=1.0">\n    <title>\n        Document\n    </title>\n</head>\n<body>\n\n\n</body>\n</html>',
         'script.js': '',
         'style.css': '',
-        'README.md': '#   JS\n#### В этом проекте описаны [...] \n\n<hr>\n\n\n<br>\n'
+        'README.md': '#   JS\n#### В этом проекте описаны [...] \n\n<hr>\n\n\n<br>\n',
+        'sitemap.xml ': "",
+        'Robots.txt': ""
     }
 }
 
@@ -43,7 +47,7 @@ function clearBodysTemplates() {
 }
 function checkFolder() {
     try {
-        fs.accessSync(folderName, fs.constants.R_OK | fs.constants.W_OK);cd ..
+        fs.accessSync(folderName, fs.constants.R_OK | fs.constants.W_OK)
         return true;
     } catch (err) {
         console.error("Folder cannot be find!");
