@@ -1,3 +1,4 @@
+"use strict"
 let user = {
     name: "Джон",
     age: 30
@@ -51,7 +52,12 @@ admin.f(); // Админ  (this == admin)
 
 admin['f'](); // Админ (неважен способ доступа к методу - через точку или квадратные скобки)
 
+// this без объекта в строгом режиме возвращает undefined
+function sayHi2() {
+    console.log(this);
+}
 
+sayHi2(); // undefined
 
 user.sayHi(); // Привет!
 
