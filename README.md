@@ -12,3 +12,5 @@ This repository stores projects created in the process of learning the correspon
 * methods_this - методы объекта "this". В этом проекте прописаны основные концепции объекта "this".
 
 * create_objects_with_new -   создание объекта через директиву new. В этом проекте описаны методы создания объектов с помощью директивы new.
+
+* optional_chain - опциональная цепочка "?.".
