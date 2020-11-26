@@ -13,4 +13,4 @@ This repository stores projects created in the process of learning the correspon
 
 * create_objects_with_new -   создание объекта через директиву new. В этом проекте описаны методы создания объектов с помощью директивы new.
 
-* optional_chain - опциональная цепочка "?.".
+* optional_chain - опциональная цепочка "?.". В этом проекте описана работа специальной синтаксической конструкции "?.".
