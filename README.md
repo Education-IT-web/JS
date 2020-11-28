@@ -3,6 +3,9 @@ This repository stores projects created in the process of learning the correspon
 
 ## Folders:
 
+### Objects:
+
+
 * copy_objects_and_links - копирование объектов и ссылок. В этом проекте описаны базовые принципы копирования объектов и ссылок.
 
 * garbage_collection - сборка мусора. В этом проекте описаны основы работы сборщика мусора, интерпретатора языка программирования JS.
@@ -18,3 +21,7 @@ This repository stores projects created in the process of learning the correspon
 * data_type_symbol - тип данных "Symbol". В этом проекте описан принципы работы с типом данныз "Symbol".
 
 * object_to_primitive - преобразование объектов в прмитивы. В этом проекте описаны принципы преобразования объектов в примитивы.
+
+### Data_types:
+
+* primitives_methods - методы примитивов. В этом проекте описаны общие характеристики и возможности примитивов.
